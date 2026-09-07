@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Deep midnight luxury background glow -->
+    <radialGradient id="bgGlow" cx="50%" cy="38%" r="65%">
+      <stop offset="0%" stop-color="#162842" />
+      <stop offset="45%" stop-color="#0a131f" />
+      <stop offset="100%" stop-color="#020509" />
+    </radialGradient>
+
+    <!-- Metallic Gold Foil Gradient -->
+    <linearGradient id="goldGrad" x1="15%" y1="10%" x2="85%" y2="90%">
+      <stop offset="0%" stop-color="#fff5db" />
+      <stop offset="20%" stop-color="#ecd18f" />
+      <stop offset="45%" stop-color="#d4af37" />
+      <stop offset="65%" stop-color="#fff1c5" />
+      <stop offset="85%" stop-color="#b8860b" />
+      <stop offset="100%" stop-color="#8a6108" />
+    </linearGradient>
+
+    <!-- Outer Gold Edge Gradient -->
+    <linearGradient id="edgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fdf2cd" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#d4af37" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#8a6108" stop-opacity="0.7" />
+    </linearGradient>
+
+    <!-- Soft Ambient Gold Glow -->
+    <filter id="luxuryGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComponentTransfer in="blur" result="glow1">
+        <feFuncA type="linear" slope="0.4" />
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode in="glow1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Luxury Background Base -->
+  <rect width="512" height="512" rx="120" fill="url(#bgGlow)" />
+
+  <!-- Delicate Outer Bevel Ring -->
+  <rect x="20" y="20" width="472" height="472" rx="104" fill="none" stroke="url(#edgeGrad)" stroke-width="3" />
+
+  <!-- Subtle Inner Halo Accent -->
+  <circle cx="256" cy="256" r="198" fill="none" stroke="url(#edgeGrad)" stroke-width="1.2" stroke-dasharray="4 6" opacity="0.45" />
+
+  <!-- Luxurious 'RS' Monogram -->
+  <g filter="url(#luxuryGlow)">
+    <text
+      x="256"
+      y="322"
+      text-anchor="middle"
+      font-family="'Times New Roman', Georgia, 'Playfair Display', serif"
+      font-size="190"
+      font-weight="700"
+      letter-spacing="4"
+      fill="url(#goldGrad)"
+      stroke="url(#goldGrad)"
+      stroke-width="1.2"
+    >RS</text>
+
+    <!-- Top Right Celestial Diamond Sparkle -->
+    <polygon points="392,130 397,144 411,149 397,154 392,168 387,154 373,149 387,144" fill="#fff5db" opacity="0.9" />
+
+    <!-- Bottom Left Subtle Sparkle -->
+    <polygon points="120,370 123,380 133,383 123,386 120,396 117,386 107,383 117,380" fill="#ecd18f" opacity="0.6" />
+  </g>
+</svg>

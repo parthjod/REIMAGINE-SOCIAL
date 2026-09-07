@@ -1,0 +1,114 @@
+{
+  "hero": {
+    "title": "REIMAGINE SOCIAL",
+    "tagline": "The social medium designed to set you free, not keep you hooked.",
+    "tags": {
+      "finiteEpochs": "Finite Daily Epochs",
+      "resonance": "Resonance Over Likes",
+      "zeroAlgorithms": "Zero Algorithms",
+      "slowPresence": "Slow Presence"
+    }
+  },
+  "cards": {
+    "finiteEpochs": {
+      "kicker": "Anti-Doomscroll",
+      "heading": "Finite Epochs",
+      "body": "A bounded daily stream with a definitive horizon. Once you finish today’s reflections, you are caught up and free."
+    },
+    "resonance": {
+      "kicker": "Beyond The Like Button",
+      "heading": "Qualitative Resonance",
+      "body": "Four dimensions of human connection: Perspective Shift, Grounding Calm, Creative Spark, and Shared Humanity."
+    },
+    "campfire": {
+      "kicker": "Live Co-Presence",
+      "heading": "The Campfire",
+      "body": "Gather in real-time around ambient procedural soundscapes and ephemeral thought ripples without surveillance."
+    },
+    "constellation": {
+      "kicker": "Spatial Human Map",
+      "heading": "Constellations",
+      "body": "Discover kindred minds connected through intellectual and creative frequencies rather than follower counts."
+    },
+    "slowLetters": {
+      "kicker": "Epistolary Depth",
+      "heading": "Slow Letters",
+      "body": "Deliberate letters sealed with wax and delivered at golden hour (Dawn or Dusk) to restore genuine correspondence."
+    }
+  },
+  "panels": {
+    "bridge": {
+      "heading": "The pause before you scroll.",
+      "body": "Every infinite feed relies on you scrolling before you think. REIMAGINE SOCIAL puts one intentional moment of presence between dopamine casino loops and your real life.",
+      "stat1dt": "3.5 hrs",
+      "stat1dd": "Average daily doomscrolling time reclaimed for human flourishing",
+      "stat2dt": "0 algorithms",
+      "stat2dd": "No outrage optimization, no follower counts, no vanity scorecards"
+    },
+    "bazaar": {
+      "heading": "Connect like gathering around a hearth.",
+      "body": "Experience daily finite epochs, ambient synchronous campfires, and unhurried slow letters. Step into a social space that respects your human dignity.",
+      "button": "Explore The Social Studio"
+    }
+  },
+  "social": {
+    "nav": {
+      "epoch": "Daily Epoch",
+      "campfire": "The Campfire",
+      "constellation": "Constellations",
+      "letters": "Slow Letters",
+      "radar": "Escape Radar",
+      "manifesto": "The Paradigm Shift"
+    },
+    "epoch": {
+      "badge": "Daily Finite Epoch",
+      "caughtUpBanner": "You have experienced all of today's reflections. The horizon is clear.",
+      "caughtUpSub": "No infinite scroll. No algorithmic slot machines. Go outside, call someone, or rest your eyes.",
+      "caughtUpBtn": "Take A Mindful Breath",
+      "composePrompt": "Share your reflection on today's prompt...",
+      "shareBtn": "Anchor Reflection",
+      "perspectives": "Perspective",
+      "grounding": "Grounding",
+      "spark": "Spark",
+      "humanity": "Humanity"
+    },
+    "campfire": {
+      "livePresence": "minds quietly present around this fire",
+      "soundscapeLabel": "Procedural Soundscape:",
+      "dropThoughtPlaceholder": "Drop an ephemeral whisper into the hearth...",
+      "sendSpark": "Release Spark",
+      "soundNone": "Silence",
+      "soundHearth": "Fireplace",
+      "soundRain": "Rain on Moss",
+      "soundTwilight": "Twilight Waves",
+      "soundChimes": "Temple Chimes"
+    },
+    "constellation": {
+      "title": "Cosmic Community Map",
+      "subtitle": "Humans connected by resonance, curious frequencies, and deep craft. Click any star node to inspect their orbit.",
+      "allClusters": "All Frequencies",
+      "sendLetterToNode": "Send Slow Letter"
+    },
+    "letters": {
+      "title": "Slow Letters",
+      "subtitle": "Deliberate correspondence delivered only at Dawn or Dusk. No read-receipt anxiety. No instant ping-pong.",
+      "composeBtn": "Write A Slow Letter",
+      "sealBtn": "Seal with Golden Wax",
+      "deliveryDawn": "Scheduled for Sunrise delivery (06:00)",
+      "deliveryDusk": "Scheduled for Sunset delivery (18:30)",
+      "unopened": "Sealed with Wax — Tap to Break Seal"
+    },
+    "radar": {
+      "title": "The Escape Radar",
+      "subtitle": "Real-time metrics measuring your freedom from addictive algorithmic feeds.",
+      "hoursSaved": "Hours Reclaimed Today",
+      "intentionScore": "Mindful Intention Index",
+      "deepConnections": "Deep Resonances Formed",
+      "quietMinutes": "Minutes in Quiet Presence"
+    }
+  },
+  "ui": {
+    "backHome": "← Back to Horizon",
+    "languageLabel": "EN"
+  }
+}

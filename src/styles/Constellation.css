@@ -1,0 +1,362 @@
+/* src/styles/Constellation.css */
+
+.constellation-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.constellation-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.constellation-title-col h3 {
+  font-family: 'Ogg Medium', Georgia, serif;
+  font-size: clamp(20px, 2.4vw, 26px);
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.constellation-title-col p {
+  font-size: 13px;
+  color: rgba(238, 243, 255, 0.7);
+  max-width: 580px;
+}
+
+.cluster-filter-pills {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.cluster-pill {
+  padding: 4px 11px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(238, 243, 255, 0.8);
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 160ms ease;
+}
+
+.cluster-pill:hover,
+.cluster-pill.active {
+  background: rgba(56, 189, 248, 0.18);
+  border-color: #38bdf8;
+  color: #ffffff;
+}
+
+/* Canvas Box — Compact Height 320px */
+.constellation-canvas-box {
+  position: relative;
+  height: 320px;
+  background: radial-gradient(circle at center, rgba(12, 24, 44, 0.9) 0%, rgba(4, 8, 16, 0.98) 80%);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.8), 0 12px 36px rgba(0, 0, 0, 0.5);
+}
+
+.space-dust-bg {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(1px 1px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 80px 120px, #38bdf8, rgba(0,0,0,0)),
+    radial-gradient(1.5px 1.5px at 150px 200px, #fbbf24, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 240px 90px, #f43f5e, rgba(0,0,0,0));
+  background-size: 300px 300px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.constellation-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Star Nodes */
+.constellation-star-node {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  outline: none;
+}
+
+.star-pulse-ring {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--aura-color);
+  opacity: 0.4;
+  animation: pulseRing 3s infinite ease-out;
+  pointer-events: none;
+}
+
+@keyframes pulseRing {
+  0% { transform: scale(0.6); opacity: 0.8; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+.star-avatar-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid var(--aura-color);
+  overflow: hidden;
+  box-shadow: 0 0 12px var(--aura-color);
+  transition: transform 180ms ease;
+}
+
+.star-avatar-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.constellation-star-node:hover .star-avatar-circle,
+.constellation-star-node.hovered .star-avatar-circle {
+  transform: scale(1.2);
+}
+
+.star-tooltip {
+  position: absolute;
+  top: 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(10, 18, 30, 0.92);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 4px 10px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0.85;
+}
+
+.constellation-star-node:hover .star-tooltip,
+.constellation-star-node.hovered .star-tooltip {
+  opacity: 1;
+  border-color: var(--aura-color);
+}
+
+.star-name {
+  font-size: 11px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.star-role {
+  font-size: 9.5px;
+  color: rgba(238, 243, 255, 0.6);
+}
+
+.star-orbit-tag {
+  font-size: 8.5px;
+  color: #fbbf24;
+}
+
+/* Legend */
+.constellation-legend {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  font-size: 11.5px;
+  color: rgba(238, 243, 255, 0.7);
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legend-dot.orbit-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #38bdf8;
+}
+
+.legend-line {
+  width: 16px;
+  height: 1px;
+  border-top: 1px dashed rgba(255, 255, 255, 0.4);
+}
+
+.legend-accent {
+  color: #34d399;
+  font-weight: 500;
+}
+
+/* Node Details Modal — Compact & Scroll-free */
+.node-modal-card {
+  max-width: 480px;
+  padding: 20px 24px;
+}
+
+.node-modal-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.node-modal-avatar-box {
+  position: relative;
+  width: 52px;
+  height: 52px;
+}
+
+.node-modal-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.node-aura-glow-ring {
+  position: absolute;
+  inset: -2px;
+  border-radius: 50%;
+  border: 2px solid;
+  pointer-events: none;
+}
+
+.node-cluster-badge {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #fbbf24;
+}
+
+.node-modal-info h3 {
+  font-family: 'Ogg Medium', Georgia, serif;
+  font-size: 20px;
+  color: #ffffff;
+  margin: 1px 0 2px 0;
+}
+
+.node-handle {
+  font-size: 12px;
+  color: rgba(238, 243, 255, 0.6);
+  display: block;
+}
+
+.node-role {
+  font-size: 12px;
+  color: #38bdf8;
+  margin-top: 2px;
+}
+
+.node-modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.node-modal-body h4 {
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(238, 243, 255, 0.5);
+  margin-bottom: 2px;
+}
+
+.node-bio-section p {
+  font-size: 13px;
+  color: rgba(238, 243, 255, 0.85);
+  line-height: 1.45;
+  margin: 0;
+}
+
+.node-thought-quote {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 13.5px;
+  line-height: 1.4;
+  color: #fbbf24;
+  padding-left: 10px;
+  border-left: 2px solid rgba(251, 191, 36, 0.4);
+  margin: 0;
+}
+
+.node-freq-tags {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.freq-pill {
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(238, 243, 255, 0.8);
+  font-size: 11px;
+}
+
+.node-metric-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.metric-num {
+  display: block;
+  font-family: 'Ogg Medium', Georgia, serif;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.metric-lbl {
+  font-size: 9.5px;
+  color: rgba(238, 243, 255, 0.5);
+}
+
+.node-letter-btn {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 20px;
+  background: #38bdf8;
+  color: #04080e;
+  border: none;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 160ms ease;
+}
+
+.node-letter-btn:hover {
+  background: #7dd3fc;
+}

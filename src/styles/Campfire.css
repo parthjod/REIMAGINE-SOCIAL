@@ -1,0 +1,361 @@
+/* src/styles/Campfire.css */
+
+.campfire-room-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.campfire-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.campfire-live-indicator {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.live-pulsing-fire {
+  font-size: 26px;
+  animation: flameFlicker 2s infinite ease-in-out;
+}
+
+@keyframes flameFlicker {
+  0%, 100% { transform: scale(1) rotate(-1deg); filter: drop-shadow(0 0 10px #f97316); }
+  50% { transform: scale(1.1) rotate(2deg); filter: drop-shadow(0 0 20px #fbbf24); }
+}
+
+.live-text-col h3 {
+  font-family: 'Ogg Medium', Georgia, serif;
+  font-size: 20px;
+  color: #ffffff;
+  margin-bottom: 2px;
+}
+
+.live-count-sub {
+  font-size: 12px;
+  color: rgba(238, 243, 255, 0.7);
+}
+
+.live-count-sub strong {
+  color: #fbbf24;
+}
+
+/* Soundscape Bar */
+.soundscape-control-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.soundscape-modes {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.sound-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  color: rgba(238, 243, 255, 0.8);
+  font-size: 11.5px;
+  cursor: pointer;
+  transition: all 160ms ease;
+}
+
+.sound-chip:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.sound-chip.active {
+  background: rgba(251, 191, 36, 0.18);
+  border-color: #fbbf24;
+  color: #fbbf24;
+  box-shadow: 0 0 12px rgba(251, 191, 36, 0.2);
+}
+
+.sound-wave-anim {
+  font-size: 10px;
+  animation: audioPulse 1.2s infinite ease-in-out;
+}
+
+.sound-volume-slider-box {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sound-volume-slider-box input {
+  width: 55px;
+  accent-color: #fbbf24;
+  cursor: pointer;
+}
+
+/* Hearth Stage — Compact Height 220px */
+.campfire-hearth-stage {
+  position: relative;
+  height: 220px;
+  background: radial-gradient(circle at center, rgba(30, 20, 10, 0.9) 0%, rgba(6, 12, 22, 0.95) 75%);
+  border: 1px solid rgba(251, 191, 36, 0.2);
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.8), 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.hearth-glow-radial {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(249, 115, 22, 0.25) 0%, rgba(251, 191, 36, 0.05) 50%, transparent 70%);
+  animation: radialPulse 4s infinite ease-in-out;
+  pointer-events: none;
+}
+
+@keyframes radialPulse {
+  0%, 100% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.15); opacity: 1; }
+}
+
+/* Central Flame */
+.campfire-central-flame {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.flame-core {
+  width: 32px;
+  height: 50px;
+  border-radius: 50% 50% 30% 30%;
+  background: linear-gradient(180deg, #fef08a 0%, #f97316 60%, #dc2626 100%);
+  box-shadow: 0 0 28px #f97316, 0 0 50px #fbbf24;
+  animation: flameBurn 1.6s infinite ease-in-out alternate;
+}
+
+@keyframes flameBurn {
+  0% { transform: scaleY(0.95) skewX(-2deg); }
+  100% { transform: scaleY(1.08) skewX(2deg); }
+}
+
+.fire-prompt-tag {
+  margin-top: 10px;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(251, 191, 36, 0.85);
+  background: rgba(251, 191, 36, 0.1);
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(251, 191, 36, 0.25);
+}
+
+/* Floating Sparks */
+.floating-sparks-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.floating-spark-card {
+  position: absolute;
+  background: rgba(10, 18, 30, 0.88);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--spark-glow);
+  border-radius: 12px;
+  padding: 8px 12px;
+  max-width: 210px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4), 0 0 12px var(--spark-glow);
+  animation: none;
+  pointer-events: auto;
+}
+
+.floating-spark-card:hover {
+  transform: none;
+}
+
+.spark-pos-0 { top: 8%; left: 5%; }
+.spark-pos-1 { top: 12%; right: 5%; }
+.spark-pos-2 { bottom: 10%; left: 8%; }
+.spark-pos-3 { bottom: 8%; right: 8%; }
+.spark-pos-4 { top: 6%; left: 40%; }
+
+@keyframes sparkFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+.spark-top {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10.5px;
+  margin-bottom: 2px;
+}
+
+.spark-author { font-weight: 600; color: #ffffff; }
+.spark-location { color: rgba(238, 243, 255, 0.5); font-size: 9.5px; }
+.spark-vibe-pill {
+  margin-left: auto;
+  font-size: 9px;
+  padding: 1px 5px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  color: var(--spark-glow);
+}
+
+.spark-body {
+  font-size: 11px;
+  line-height: 1.35;
+  color: rgba(238, 243, 255, 0.9);
+  margin-bottom: 2px;
+}
+
+.spark-time {
+  font-size: 9px;
+  color: rgba(238, 243, 255, 0.4);
+}
+
+/* Whisper Input Box */
+.campfire-whisper-box {
+  background: rgba(14, 22, 34, 0.85);
+  border: 1px solid rgba(251, 191, 36, 0.3);
+  border-radius: 16px;
+  padding: 14px 16px;
+}
+
+.whisper-input-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.whisper-text-input {
+  flex: 1;
+  background: rgba(4, 8, 14, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  padding: 9px 16px;
+  color: #ffffff;
+  font-size: 13px;
+  outline: none;
+}
+
+.whisper-text-input:focus {
+  border-color: #fbbf24;
+}
+
+.whisper-send-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 18px;
+  background: #fbbf24;
+  color: #04080e;
+  border: none;
+  border-radius: 999px;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.whisper-vibes-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.vibe-label {
+  font-size: 11px;
+  color: rgba(238, 243, 255, 0.6);
+}
+
+.vibe-chip {
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(238, 243, 255, 0.7);
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.vibe-chip.selected {
+  background: rgba(251, 191, 36, 0.2);
+  border-color: #fbbf24;
+  color: #fbbf24;
+  font-weight: 600;
+}
+
+/* Recent Sparks Stream */
+.recent-sparks-stream h4 {
+  font-size: 14px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.sparks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+.spark-grid-item {
+  background: rgba(10, 18, 30, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.spark-grid-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+  font-size: 11px;
+}
+
+.spark-grid-user {
+  color: rgba(238, 243, 255, 0.85);
+  font-weight: 500;
+}
+
+.spark-grid-tag {
+  color: #fbbf24;
+}
+
+.spark-grid-text {
+  font-size: 12px;
+  line-height: 1.4;
+  color: #eef3ff;
+  margin-bottom: 4px;
+}
+
+.spark-grid-time {
+  font-size: 10px;
+  color: rgba(238, 243, 255, 0.4);
+}
