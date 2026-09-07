@@ -50,7 +50,7 @@ Social media has devolved into an **extractive attention casino**. Built on vari
 │ • Infinite casino scroll (dopamine trap)│ • Daily Finite Epoch (clear completion horizon) │
 │ • Public vanity likes & follower counts │ • 4D Qualitative Resonance (Perspective, Calm)  │
 │ • Algorithmic outrage & viral bait      │ • Intentional prompt anchors & curiosity nodes  │
-│ • Parasocial influencer hierarchies     │ • Organic Constellations (spatial human map)   │
+│ • Parasocial influencer hierarchies     │ • Organic Constellations (spatial human map)    │
 │ • Disposable 10s snaps & ping-pong chats│ • Slow Letters (wax-sealed, Dawn/Dusk dispatch) │
 │ • Disconnected asynchronous shouting    │ • Synchronous Campfire (live ambient presence)  │
 └─────────────────────────────────────────┴─────────────────────────────────────────────────┘
