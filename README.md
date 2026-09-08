@@ -6,6 +6,10 @@
 </p>
 
 <p align="center">
+  🚀 <strong><a href="https://reimagine-social-experience.vercel.app/">Live Demo</a></strong>
+</p>
+
+<p align="center">
   <img src="https://img.shields.io/badge/Challenge-ESCAPE-FF6B6B?style=for-the-badge&logo=target&logoColor=white" alt="ESCAPE Challenge" />
   <img src="https://img.shields.io/badge/React-18.3-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React 18" />
   <img src="https://img.shields.io/badge/TypeScript-5.5_Strict-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
