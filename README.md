@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  🚀 <strong><a href="https://reimagine-social-experience.vercel.app/">Live Demo</a></strong>
+  🚀 <strong><a href="https://reimagine-social-experience.vercel.app/">Live Product</a></strong>
 </p>
 
 <p align="center">
