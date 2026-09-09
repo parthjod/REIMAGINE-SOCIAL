@@ -92,7 +92,7 @@ export function CampfireRoom({
       {/* Atmospheric Center Hearth Scene */}
       <div className="campfire-hearth-stage">
         <div className="hearth-glow-radial" />
-        
+
         {/* Floating thought orbs floating softly */}
         <div className="floating-sparks-layer" aria-live="polite">
           {thoughts.slice(0, 5).map((thought, idx) => (
@@ -135,11 +135,7 @@ export function CampfireRoom({
             onChange={(e) => setWhisperText(e.target.value)}
             maxLength={180}
           />
-          <button
-            type="submit"
-            className="whisper-send-btn"
-            disabled={!whisperText.trim()}
-          >
+          <button type="submit" className="whisper-send-btn" disabled={!whisperText.trim()}>
             <span>✦</span>
             <span>{t('social.campfire.sendSpark')}</span>
           </button>
@@ -167,7 +163,9 @@ export function CampfireRoom({
           {thoughts.map((item) => (
             <div key={item.id} className="spark-grid-item">
               <div className="spark-grid-header">
-                <span className="spark-grid-user">{item.author} • {item.location}</span>
+                <span className="spark-grid-user">
+                  {item.author} • {item.location}
+                </span>
                 <span className="spark-grid-tag">{item.vibe}</span>
               </div>
               <p className="spark-grid-text">"{item.text}"</p>

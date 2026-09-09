@@ -77,7 +77,8 @@ export class ErrorBoundary extends Component<Props, State> {
                 marginBottom: '24px',
               }}
             >
-              An unexpected disturbance rippled through the stream. Your space and reflections are safe. Let us take a deep breath and return to stillness.
+              An unexpected disturbance rippled through the stream. Your space and reflections are
+              safe. Let us take a deep breath and return to stillness.
             </p>
             <button
               onClick={this.handleReset}

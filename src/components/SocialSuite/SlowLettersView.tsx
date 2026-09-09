@@ -177,11 +177,7 @@ export function SlowLettersView({
           </div>
 
           <div className="composer-footer">
-            <button
-              type="button"
-              className="composer-cancel"
-              onClick={() => setIsComposing(false)}
-            >
+            <button type="button" className="composer-cancel" onClick={() => setIsComposing(false)}>
               Cancel
             </button>
             <button
@@ -219,7 +215,11 @@ export function SlowLettersView({
                 </div>
 
                 <div className="envelope-sender-meta">
-                  <img src={letter.sender.avatar} alt={letter.sender.name} className="sender-avatar" />
+                  <img
+                    src={letter.sender.avatar}
+                    alt={letter.sender.name}
+                    className="sender-avatar"
+                  />
                   <div className="sender-names">
                     <span className="sender-name">{letter.sender.name}</span>
                     <span className="sender-city">{letter.sender.city}</span>
@@ -237,9 +237,7 @@ export function SlowLettersView({
                 {/* Wax Seal Stamp */}
                 <div className="envelope-wax-stamp" style={{ backgroundColor: letter.sealColor }}>
                   <span className="stamp-crest">REIMAGINE</span>
-                  <span className="stamp-status">
-                    {letter.isOpened ? 'UNSEALED' : 'SEALED'}
-                  </span>
+                  <span className="stamp-status">{letter.isOpened ? 'UNSEALED' : 'SEALED'}</span>
                 </div>
               </div>
             </div>
@@ -262,7 +260,10 @@ export function SlowLettersView({
 
             <div className="parchment-header">
               <div className="parchment-stamp">
-                <span className="parchment-wax-seal" style={{ backgroundColor: activeLetterModal.sealColor }}>
+                <span
+                  className="parchment-wax-seal"
+                  style={{ backgroundColor: activeLetterModal.sealColor }}
+                >
                   REIMAGINE
                 </span>
                 <span className="parchment-date">{activeLetterModal.deliveryTime}</span>
@@ -270,7 +271,8 @@ export function SlowLettersView({
 
               <h3>{activeLetterModal.subject}</h3>
               <p className="parchment-byline">
-                From {activeLetterModal.sender.name} ({activeLetterModal.sender.city}) to {activeLetterModal.recipientName}
+                From {activeLetterModal.sender.name} ({activeLetterModal.sender.city}) to{' '}
+                {activeLetterModal.recipientName}
               </p>
             </div>
 

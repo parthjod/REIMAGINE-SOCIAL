@@ -40,10 +40,8 @@ export function useSocialState() {
 
   // Epoch State with schema protection
   const [epoch, setEpoch] = useState<DailyEpoch>(() => {
-    return safeJsonParse<DailyEpoch>(
-      localStorage.getItem(STORAGE_KEYS.EPOCH),
-      TODAY_EPOCH,
-      (val) => Boolean(val && typeof val === 'object' && 'posts' in (val as DailyEpoch))
+    return safeJsonParse<DailyEpoch>(localStorage.getItem(STORAGE_KEYS.EPOCH), TODAY_EPOCH, (val) =>
+      Boolean(val && typeof val === 'object' && 'posts' in (val as DailyEpoch)),
     );
   });
 
@@ -54,11 +52,13 @@ export function useSocialState() {
     return safeJsonParse<CampfireThought[]>(
       localStorage.getItem(STORAGE_KEYS.CAMPFIRE),
       INITIAL_CAMPFIRE_THOUGHTS,
-      (val) => Array.isArray(val)
+      (val) => Array.isArray(val),
     );
   });
 
-  const [activeSound, setActiveSound] = useState<'hearth' | 'rain' | 'twilight' | 'chimes' | null>(null);
+  const [activeSound, setActiveSound] = useState<'hearth' | 'rain' | 'twilight' | 'chimes' | null>(
+    null,
+  );
   const [soundVolume, setSoundVolume] = useState<number>(0.35);
 
   // Constellation State
@@ -70,7 +70,7 @@ export function useSocialState() {
     return safeJsonParse<SlowLetter[]>(
       localStorage.getItem(STORAGE_KEYS.LETTERS),
       INITIAL_LETTERS,
-      (val) => Array.isArray(val)
+      (val) => Array.isArray(val),
     );
   });
 
@@ -79,7 +79,7 @@ export function useSocialState() {
     return safeJsonParse<EscapeMetrics>(
       localStorage.getItem(STORAGE_KEYS.STATS),
       DEFAULT_STATS,
-      (val) => Boolean(val && typeof val === 'object')
+      (val) => Boolean(val && typeof val === 'object'),
     );
   });
 
@@ -150,7 +150,8 @@ export function useSocialState() {
         id: 'user-self',
         name: 'You (Human Presence)',
         handle: '@you.presence',
-        avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80',
+        avatar:
+          'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80',
         role: 'Intentional Seeker',
         city: 'Present Realm',
         constellation: 'Atmospheres & Light',
@@ -200,14 +201,20 @@ export function useSocialState() {
   };
 
   // Send Slow Letter
-  const sendLetter = (recipientName: string, subject: string, body: string, reflectionPrompt: string) => {
+  const sendLetter = (
+    recipientName: string,
+    subject: string,
+    body: string,
+    reflectionPrompt: string,
+  ) => {
     const newLetter: SlowLetter = {
       id: `letter-${Date.now()}`,
       sender: {
         id: 'user-self',
         name: 'You',
         handle: '@you.presence',
-        avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80',
+        avatar:
+          'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80',
         role: 'Intentional Correspondent',
         city: 'Here',
         constellation: 'Poetics of Everyday',
@@ -232,9 +239,7 @@ export function useSocialState() {
   };
 
   const openLetter = (id: string) => {
-    setLetters((prev) =>
-      prev.map((l) => (l.id === id ? { ...l, isOpened: true } : l))
-    );
+    setLetters((prev) => prev.map((l) => (l.id === id ? { ...l, isOpened: true } : l)));
   };
 
   return {

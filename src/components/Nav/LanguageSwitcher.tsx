@@ -12,13 +12,11 @@ export function LanguageSwitcher() {
   }
 
   return (
-    <button
-      className="language-switcher"
-      onClick={toggle}
-      aria-label="Change language"
-    >
+    <button className="language-switcher" onClick={toggle} aria-label="Change language">
       <span>{t('ui.languageLabel')}</span>
-      <span aria-hidden="true" style={{ marginBottom: "10px" }}>⌄</span>
+      <span aria-hidden="true" style={{ marginBottom: '10px' }}>
+        ⌄
+      </span>
     </button>
   );
 }

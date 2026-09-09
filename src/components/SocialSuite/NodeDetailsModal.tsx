@@ -11,7 +11,12 @@ export function NodeDetailsModal({ node, onClose, onSendLetter }: NodeDetailsMod
   return (
     <div className="node-modal-overlay" role="dialog" aria-modal="true">
       <div className="node-modal-card">
-        <button type="button" className="node-modal-close" onClick={onClose} aria-label="Close star details">
+        <button
+          type="button"
+          className="node-modal-close"
+          onClick={onClose}
+          aria-label="Close star details"
+        >
           ✕
         </button>
 
@@ -27,7 +32,9 @@ export function NodeDetailsModal({ node, onClose, onSendLetter }: NodeDetailsMod
           <div className="node-modal-info">
             <span className="node-cluster-badge">{node.cluster}</span>
             <h3>{node.name}</h3>
-            <span className="node-handle">{node.handle} • {node.city}</span>
+            <span className="node-handle">
+              {node.handle} • {node.city}
+            </span>
             <p className="node-role">{node.role}</p>
           </div>
         </div>
@@ -40,16 +47,16 @@ export function NodeDetailsModal({ node, onClose, onSendLetter }: NodeDetailsMod
 
           <div className="node-thought-section">
             <h4>Recent Anchored Thought</h4>
-            <blockquote className="node-thought-quote">
-              "{node.recentThought}"
-            </blockquote>
+            <blockquote className="node-thought-quote">"{node.recentThought}"</blockquote>
           </div>
 
           <div className="node-frequencies-section">
             <h4>Resonant Frequencies</h4>
             <div className="node-freq-tags">
               {node.frequencies.map((freq) => (
-                <span key={freq} className="freq-pill">#{freq}</span>
+                <span key={freq} className="freq-pill">
+                  #{freq}
+                </span>
               ))}
             </div>
           </div>

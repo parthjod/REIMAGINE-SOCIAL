@@ -9,9 +9,7 @@
   z-index: 5;
   opacity: var(--sights-opacity);
   visibility: var(--sights-visibility);
-  transform:
-    translateX(var(--sights-enter-x))
-    scale(var(--sights-scale));
+  transform: translateX(var(--sights-enter-x)) scale(var(--sights-scale));
   transform-origin: center center;
   will-change: transform, opacity;
   overflow: hidden;
@@ -64,10 +62,30 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 200ms, border-color 200ms;
+  transition:
+    background 200ms,
+    border-color 200ms;
 }
 
 .sight-nav:hover {
   background: rgba(10, 30, 70, 0.65);
   border-color: rgba(238, 243, 255, 0.5);
+}
+
+@media (max-width: 768px) {
+  .sights-track {
+    padding: 0 20px;
+    column-gap: 14px;
+  }
+
+  .sights-controls {
+    right: 20px;
+    top: calc(var(--sights-screen-top) + 220px);
+  }
+
+  .sight-nav {
+    width: 40px;
+    height: 40px;
+    font-size: 15px;
+  }
 }

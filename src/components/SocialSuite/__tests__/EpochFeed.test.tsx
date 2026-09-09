@@ -14,7 +14,7 @@ describe('EpochFeed Component', () => {
         epoch={TODAY_EPOCH}
         onToggleResonance={handleToggleResonance}
         onAddPost={handleAddPost}
-      />
+      />,
     );
 
     expect(screen.getByText(`Epoch #${TODAY_EPOCH.epochNumber}`)).toBeInTheDocument();
@@ -30,7 +30,7 @@ describe('EpochFeed Component', () => {
         epoch={TODAY_EPOCH}
         onToggleResonance={handleToggleResonance}
         onAddPost={handleAddPost}
-      />
+      />,
     );
 
     const firstPost = TODAY_EPOCH.posts[0];
@@ -48,12 +48,12 @@ describe('EpochFeed Component', () => {
         epoch={TODAY_EPOCH}
         onToggleResonance={handleToggleResonance}
         onAddPost={handleAddPost}
-      />
+      />,
     );
 
     const buttons = screen.getAllByRole('button');
-    const resonanceBtn = buttons.find((btn) =>
-      btn.textContent?.includes('Perspective') || btn.textContent?.includes('Grounding')
+    const resonanceBtn = buttons.find(
+      (btn) => btn.textContent?.includes('Perspective') || btn.textContent?.includes('Grounding'),
     );
 
     if (resonanceBtn) {

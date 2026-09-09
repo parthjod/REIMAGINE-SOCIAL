@@ -8,7 +8,15 @@ interface SightCardProps extends SightCardData {
   onSelect: (index: number) => void;
 }
 
-export function SightCard({ ariaLabel, kicker, heading, body, Icon, index, onSelect }: SightCardProps) {
+export function SightCard({
+  ariaLabel,
+  kicker,
+  heading,
+  body,
+  Icon,
+  index,
+  onSelect,
+}: SightCardProps) {
   function handleKeyDown(e: KeyboardEvent<HTMLElement>) {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();

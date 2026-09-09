@@ -30,7 +30,7 @@ export function useSightSlider() {
   }, [active, getShift]);
 
   const move = useCallback((dir: 1 | -1) => {
-    setActive(prev => prev + dir);
+    setActive((prev) => prev + dir);
   }, []);
 
   const select = useCallback((index: number) => {
@@ -50,7 +50,7 @@ export function useSightSlider() {
   }, []);
 
   const normalize = useCallback(() => {
-    setActive(prev => {
+    setActive((prev) => {
       if (prev >= ORIGINAL_COUNT * 2) {
         const next = prev - ORIGINAL_COUNT;
         // Schedule jump without triggering another state update cycle

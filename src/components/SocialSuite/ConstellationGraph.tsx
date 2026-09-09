@@ -17,12 +17,18 @@ export function ConstellationGraph({ nodes, onSendLetter }: ConstellationGraphPr
 
   const clusters = ['all', ...Array.from(new Set(nodes.map((n) => n.cluster)))];
 
-  const filteredNodes = activeCluster === 'all'
-    ? nodes
-    : nodes.filter((n) => n.cluster === activeCluster);
+  const filteredNodes =
+    activeCluster === 'all' ? nodes : nodes.filter((n) => n.cluster === activeCluster);
 
   // Compute SVG connections
-  const connectionsList: { x1: number; y1: number; x2: number; y2: number; key: string; color: string }[] = [];
+  const connectionsList: {
+    x1: number;
+    y1: number;
+    x2: number;
+    y2: number;
+    key: string;
+    color: string;
+  }[] = [];
   const nodeMap = new Map<string, ConstellationNode>();
   nodes.forEach((n) => nodeMap.set(n.id, n));
 

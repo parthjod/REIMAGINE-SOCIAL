@@ -1,15 +1,42 @@
 {
   "name": "reimagine-social",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.2.0",
+  "description": "The next generation of social interaction beyond the infinite feed: finite epochs, qualitative resonance, constellations, and synchronous presence.",
   "type": "module",
+  "license": "MIT",
+  "author": "Parth <parthjod>",
+  "homepage": "https://reimagine-social-experience.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/parthjod/REIMAGINE-SOCIAL.git"
+  },
+  "bugs": {
+    "url": "https://github.com/parthjod/REIMAGINE-SOCIAL/issues"
+  },
+  "keywords": [
+    "social",
+    "reimagine",
+    "escape",
+    "human-first",
+    "mindfulness",
+    "pwa",
+    "web-audio",
+    "react",
+    "typescript"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
     "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write \"src/**/*.{ts,tsx,css,json}\"",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx,css,json}\"",
     "test": "vitest run",
-    "test:coverage": "vitest run --coverage"
+    "test:coverage": "vitest run --coverage",
+    "validate": "npm run typecheck && npm run lint && npm run test"
   },
   "dependencies": {
     "i18next": "^23.0.0",
@@ -26,9 +53,11 @@
     "@typescript-eslint/eslint-plugin": "^8.70.0",
     "@typescript-eslint/parser": "^8.70.0",
     "@vitejs/plugin-react": "^4.3.0",
+    "@vitest/coverage-v8": "^1.6.0",
     "eslint": "^10.10.0",
     "eslint-plugin-react-hooks": "^7.1.1",
     "jsdom": "^29.1.1",
+    "prettier": "^3.9.6",
     "typescript": "^5.5.0",
     "vite": "^5.4.0",
     "vite-plugin-pwa": "^0.20.0",

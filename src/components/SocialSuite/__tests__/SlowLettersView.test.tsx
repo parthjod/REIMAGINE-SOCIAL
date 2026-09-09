@@ -14,7 +14,7 @@ describe('SlowLettersView Component', () => {
         letters={INITIAL_LETTERS}
         onSendLetter={handleSend}
         onOpenLetter={handleOpen}
-      />
+      />,
     );
 
     expect(screen.getByText(/Slow Letters/i)).toBeInTheDocument();
@@ -30,7 +30,7 @@ describe('SlowLettersView Component', () => {
         letters={INITIAL_LETTERS}
         onSendLetter={handleSend}
         onOpenLetter={handleOpen}
-      />
+      />,
     );
 
     const composeBtn = screen.getByText(/Write A Slow Letter/i);
@@ -41,14 +41,16 @@ describe('SlowLettersView Component', () => {
     const dispatchBtn = screen.getByText(/Seal with Golden Wax/i);
 
     fireEvent.change(recipientInput, { target: { value: 'Amara Vance' } });
-    fireEvent.change(bodyInput, { target: { value: 'Thinking of the quiet library at twilight.' } });
+    fireEvent.change(bodyInput, {
+      target: { value: 'Thinking of the quiet library at twilight.' },
+    });
     fireEvent.click(dispatchBtn);
 
     expect(handleSend).toHaveBeenCalledWith(
       'Amara Vance',
       expect.any(String),
       'Thinking of the quiet library at twilight.',
-      expect.any(String)
+      expect.any(String),
     );
   });
 });

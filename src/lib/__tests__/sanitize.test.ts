@@ -4,7 +4,8 @@ import { stripDangerousMarkup, escapeHtml, sanitizeText, safeJsonParse } from '.
 
 describe('Sanitization & Security Utilities', () => {
   it('strips script tags and malicious event handlers from user text', () => {
-    const malicious = 'Hello <script>alert("pwned")</script> World <img src="x" onerror="alert(1)">';
+    const malicious =
+      'Hello <script>alert("pwned")</script> World <img src="x" onerror="alert(1)">';
     const cleaned = stripDangerousMarkup(malicious);
     expect(cleaned).not.toContain('<script>');
     expect(cleaned).not.toContain('onerror=');
@@ -47,7 +48,9 @@ describe('Sanitization & Security Utilities', () => {
   it('validates parsed structure against schema validator function', () => {
     const payload = JSON.stringify({ wrongField: true });
     const fallback = { posts: [] };
-    const parsed = safeJsonParse(payload, fallback, (val) => Boolean(val && typeof val === 'object' && 'posts' in val));
+    const parsed = safeJsonParse(payload, fallback, (val) =>
+      Boolean(val && typeof val === 'object' && 'posts' in val),
+    );
     expect(parsed).toEqual(fallback);
   });
 });

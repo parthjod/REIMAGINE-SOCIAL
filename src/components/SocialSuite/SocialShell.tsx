@@ -147,10 +147,7 @@ export function SocialShell({ initialTab = 'epoch' }: SocialShellProps) {
         )}
 
         {activeTab === 'constellation' && (
-          <ConstellationGraph
-            nodes={nodes}
-            onSendLetter={handleSendLetterTo}
-          />
+          <ConstellationGraph nodes={nodes} onSendLetter={handleSendLetterTo} />
         )}
 
         {activeTab === 'letters' && (
@@ -162,13 +159,9 @@ export function SocialShell({ initialTab = 'epoch' }: SocialShellProps) {
           />
         )}
 
-        {activeTab === 'radar' && (
-          <EscapeRadar stats={stats} />
-        )}
+        {activeTab === 'radar' && <EscapeRadar stats={stats} />}
 
-        {activeTab === 'manifesto' && (
-          <MatrixCompare />
-        )}
+        {activeTab === 'manifesto' && <MatrixCompare />}
       </div>
     </section>
   );

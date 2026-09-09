@@ -7,7 +7,10 @@ export function NotFound() {
   const { t } = useTranslation();
 
   return (
-    <div className="tool-shell" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+    <div
+      className="tool-shell"
+      style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}
+    >
       <SiteHeader isToolPage={true} />
       <main
         style={{
@@ -62,7 +65,8 @@ export function NotFound() {
               marginBottom: '32px',
             }}
           >
-            The coordinates you sought do not exist in this epoch. Take a breath and return to the hearth.
+            The coordinates you sought do not exist in this epoch. Take a breath and return to the
+            hearth.
           </p>
           <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link

@@ -13,6 +13,17 @@ export function IntroCopy() {
         <span>{t('hero.tags.zeroAlgorithms')}</span>
         <span>{t('hero.tags.slowPresence')}</span>
       </div>
+
+      <div className="hero-cta-group">
+        <button
+          type="button"
+          className="hero-enter-btn"
+          onClick={() => window.scrollTo({ top: 3900, behavior: 'smooth' })}
+          aria-label="Enter Daily Epoch experience"
+        >
+          ✦ Enter Daily Epoch ✦
+        </button>
+      </div>
     </section>
   );
 }

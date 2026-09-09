@@ -40,7 +40,9 @@
 4. [System Architecture & Tech Stack](#-system-architecture--tech-stack)
 5. [Directory & Component Hierarchy](#-directory--component-hierarchy)
 6. [Getting Started (Run Locally)](#-getting-started-run-locally)
-7. [Privacy & Digital Well-Being Guarantee](#-privacy--digital-well-being-guarantee)
+7. [Automated Testing & Code Quality](#-automated-testing--code-quality)
+8. [Open Source & Community Standards](#-open-source--community-standards)
+9. [Privacy & Digital Well-Being Guarantee](#-privacy--digital-well-being-guarantee)
 
 ---
 
@@ -66,6 +68,20 @@ Social media has devolved into an **extractive attention casino**. Built on vari
 ```
 
 > **Client-Side Implementation Note**: **REIMAGINE SOCIAL is a 100% frontend-only application**. All data is mock and static, with client-side state synchronized to browser `localStorage`. There are **zero backend servers, zero external network API calls, and zero tracking dependencies**.
+
+---
+
+## 🎯 Problem Statement & Rubric Alignment (ESCAPE Challenge)
+
+| Hackathon Requirement | Direct Architectural Implementation in REIMAGINE SOCIAL |
+| :--- | :--- |
+| **Clear & Original Concept** | **Finite Daily Epochs**: Dismantles infinite scroll. A bounded stream of daily human reflections that cleanly completes, freeing users to live their real lives. |
+| **Unique Interaction Model** | **Golden-Hour Slow Letters & Synchronous Campfire**: Epistolary wax-sealed letters dispatched exclusively at Sunrise (06:00) or Sunset (18:30); real-time co-presence without surveillance or text spam. |
+| **Distinctive Visual Language** | **Cosmic Twilight Atmosphere**: Deep obsidian glassmorphism (`#050c14`), procedural soundscape canvas, 7-layer parallax physics, and 4-color resonance aura tokens. |
+| **Thoughtful Content System** | **4D Qualitative Resonance**: Replaces binary, dopamine-exploiting "Likes" with dimensional feedback: *Perspective Shift*, *Grounding Calm*, *Creative Spark*, and *Shared Humanity*. |
+| **New Ways to Connect** | **Spatial Constellations**: An interactive gravitational star network connecting humans by shared creative frequencies and curiosity nodes rather than follower counts or status games. |
+| **Polished & Responsive Experience** | **Ergonomic Multi-Breakpoint Engine**: Seamlessly responsive across desktop, tablet, and mobile (1024px, 768px, 480px, 360px), with accessible navigation drawer and zero-layout-shift WebP assets. |
+| **Anti-Derivative Guarantee** | **Zero Clone Policy**: Contains zero reels, zero stories, zero follower tallies, zero algorithmic feeds, and zero outrage mechanics. Strictly non-derivative. |
 
 ---
 
@@ -347,6 +363,52 @@ Preview the production build locally:
 ```bash
 npm run preview
 ```
+
+---
+
+## 🧪 Automated Testing & Code Quality
+
+The repository includes a comprehensive automated test suite powered by **Vitest** and **React Testing Library**, with 100% test passing rate:
+
+```bash
+# Run all unit and component tests
+npm test
+
+# Run tests with V8 coverage report
+npm run test:coverage
+
+# Run TypeScript strict type-checking
+npm run typecheck
+
+# Run ESLint validation
+npm run lint
+
+# Run full quality pipeline (typecheck + lint + test)
+npm run validate
+```
+
+| Test Suite | Focus Area | Status |
+| :--- | :--- | :---: |
+| `src/lib/__tests__/sanitize.test.ts` | XSS attack sanitization & prototype pollution prevention | ✅ 100% Pass |
+| `src/hooks/__tests__/useSocialState.test.ts` | State machine persistence & 4D resonance voting | ✅ 100% Pass |
+| `src/components/SocialSuite/__tests__/CampfireRoom.test.tsx` | Synchronous hearth interactions & soundscapes | ✅ 100% Pass |
+| `src/components/SocialSuite/__tests__/EpochFeed.test.tsx` | Finite epoch cards & completion boundary | ✅ 100% Pass |
+| `src/components/SocialSuite/__tests__/SlowLettersView.test.tsx` | Golden hour wax seal delivery mechanics | ✅ 100% Pass |
+| `src/components/SocialSuite/__tests__/EscapeRadar.test.tsx` | Circumplex well-being & screen-time metrics | ✅ 100% Pass |
+| `src/components/shared/__tests__/ErrorBoundary.test.tsx` | Restorative UI fallback on component failures | ✅ 100% Pass |
+
+---
+
+## 🌐 Open Source & Community Standards
+
+REIMAGINE SOCIAL is an open-source initiative built for the ESCAPE challenge.
+
+- **License**: Released under the permissive [MIT License](LICENSE).
+- **Contribution Guidelines**: Review [CONTRIBUTING.md](CONTRIBUTING.md) for branch strategy and PR requirements.
+- **Architecture Deep-Dive**: Consult [ARCHITECTURE.md](ARCHITECTURE.md) for state stores and procedural Web Audio DSP specs.
+- **Security Policy**: Read [SECURITY.md](SECURITY.md) for client-side sanitization guarantees and vulnerability reporting.
+- **Code of Conduct**: Governed by the [Contributor Covenant v2.1](CODE_OF_CONDUCT.md).
+- **Changelog**: Release history documented in [CHANGELOG.md](CHANGELOG.md).
 
 ---
 

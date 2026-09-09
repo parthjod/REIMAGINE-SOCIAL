@@ -33,7 +33,9 @@ export function EscapeRadar({ stats }: EscapeRadarProps) {
           </div>
           <span className="radar-num">{stats.doomscrollHoursSaved} hrs</span>
           <span className="radar-lbl">{t('social.radar.hoursSaved')}</span>
-          <p className="radar-desc">Time that would have been consumed by infinite algorithm slot machines.</p>
+          <p className="radar-desc">
+            Time that would have been consumed by infinite algorithm slot machines.
+          </p>
         </div>
 
         <div className="radar-card">
@@ -43,7 +45,9 @@ export function EscapeRadar({ stats }: EscapeRadarProps) {
           </div>
           <span className="radar-num">{stats.mindfulIntentionScore}%</span>
           <span className="radar-lbl">{t('social.radar.intentionScore')}</span>
-          <p className="radar-desc">Ratio of deliberate reading and reflection versus passive swiping.</p>
+          <p className="radar-desc">
+            Ratio of deliberate reading and reflection versus passive swiping.
+          </p>
         </div>
 
         <div className="radar-card">
@@ -53,7 +57,9 @@ export function EscapeRadar({ stats }: EscapeRadarProps) {
           </div>
           <span className="radar-num">{stats.deepConnectionsFormed}</span>
           <span className="radar-lbl">{t('social.radar.deepConnections')}</span>
-          <p className="radar-desc">Meaningful resonances shared through unhurried letters and thoughts.</p>
+          <p className="radar-desc">
+            Meaningful resonances shared through unhurried letters and thoughts.
+          </p>
         </div>
 
         <div className="radar-card">
@@ -63,7 +69,9 @@ export function EscapeRadar({ stats }: EscapeRadarProps) {
           </div>
           <span className="radar-num">{stats.quietMinutesInPresence} min</span>
           <span className="radar-lbl">{t('social.radar.quietMinutes')}</span>
-          <p className="radar-desc">Time spent in the Synchronous Campfire listening to ambient nature.</p>
+          <p className="radar-desc">
+            Time spent in the Synchronous Campfire listening to ambient nature.
+          </p>
         </div>
       </div>
 
@@ -71,7 +79,8 @@ export function EscapeRadar({ stats }: EscapeRadarProps) {
       <div className="resonance-breakdown-panel">
         <h4>Emotional Resonance Spectrum</h4>
         <p className="breakdown-sub">
-          Unlike platforms that optimize for rage and dopamine spikes, REIMAGINE SOCIAL cultivates grounding human frequencies:
+          Unlike platforms that optimize for rage and dopamine spikes, REIMAGINE SOCIAL cultivates
+          grounding human frequencies:
         </p>
 
         <div className="spectrum-bars">
@@ -124,7 +133,8 @@ export function EscapeRadar({ stats }: EscapeRadarProps) {
           <span className="sim-score">Clarity Level: {claritySlider}%</span>
         </div>
         <p className="sim-sub">
-          Slide to feel how your nervous system shifts when moving from an extractive algorithmic feed to an intentional social medium.
+          Slide to feel how your nervous system shifts when moving from an extractive algorithmic
+          feed to an intentional social medium.
         </p>
 
         <input
@@ -177,7 +187,9 @@ export function EscapeRadar({ stats }: EscapeRadarProps) {
             <span className="milestone-check">✓</span>
             <div className="milestone-text">
               <strong>Eradicated Vanity Metrics</strong>
-              <p>Replaced follower counters and public likes with four-dimensional human resonance.</p>
+              <p>
+                Replaced follower counters and public likes with four-dimensional human resonance.
+              </p>
             </div>
           </div>
           <div className="milestone-item completed">

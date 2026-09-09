@@ -16,52 +16,63 @@ const PARADIGMS: ParadigmItem[] = [
     id: 'stream',
     dimension: 'Content Architecture',
     oldTrap: 'The Infinite Slot-Machine Feed',
-    oldTrapDetail: 'Endless scroll engineered with variable reward ratios to induce cognitive trance and doomscrolling.',
+    oldTrapDetail:
+      'Endless scroll engineered with variable reward ratios to induce cognitive trance and doomscrolling.',
     pauseSolution: 'The Daily Finite Epoch',
-    pauseDetail: '6 to 10 curated reflections anchored in a daily human inquiry. A clear horizon where you are caught up and free.',
+    pauseDetail:
+      '6 to 10 curated reflections anchored in a daily human inquiry. A clear horizon where you are caught up and free.',
     humanImpact: 'Eliminates screen trance; respects human circadian attention.',
   },
   {
     id: 'metrics',
     dimension: 'Feedback & Validation',
     oldTrap: 'Quantified Vanity Metrics',
-    oldTrapDetail: 'Public like counts, view tallies, and follower counters turning human expression into competitive performance.',
+    oldTrapDetail:
+      'Public like counts, view tallies, and follower counters turning human expression into competitive performance.',
     pauseSolution: '4D Qualitative Resonance',
-    pauseDetail: 'Perspective Shift, Grounding Calm, Creative Spark, and Shared Humanity with zero public scorekeeping.',
+    pauseDetail:
+      'Perspective Shift, Grounding Calm, Creative Spark, and Shared Humanity with zero public scorekeeping.',
     humanImpact: 'Banishes social comparison anxiety and algorithmic pandering.',
   },
   {
     id: 'graph',
     dimension: 'Social Topography',
     oldTrap: 'Follower Feudalism',
-    oldTrapDetail: 'Power-law hierarchies where 0.1% of creators extract attention while 99.9% are audience consumers.',
+    oldTrapDetail:
+      'Power-law hierarchies where 0.1% of creators extract attention while 99.9% are audience consumers.',
     pauseSolution: 'Organic Constellations',
-    pauseDetail: 'Spatial networks where kindred minds cluster around mutual philosophical, artistic, and craft frequencies.',
+    pauseDetail:
+      'Spatial networks where kindred minds cluster around mutual philosophical, artistic, and craft frequencies.',
     humanImpact: 'Decentralizes community; creates genuine reciprocal kinship.',
   },
   {
     id: 'presence',
     dimension: 'Gathering & Presence',
     oldTrap: 'Broadcasting into the Void',
-    oldTrapDetail: 'Asynchronous yelling into comment sections with toxic rage-farming and disconnected observers.',
+    oldTrapDetail:
+      'Asynchronous yelling into comment sections with toxic rage-farming and disconnected observers.',
     pauseSolution: 'The Synchronous Campfire',
-    pauseDetail: 'Ambient gathering space with procedural nature soundscapes and ephemeral thought ripples.',
+    pauseDetail:
+      'Ambient gathering space with procedural nature soundscapes and ephemeral thought ripples.',
     humanImpact: 'Restores felt co-presence and nervous system calm.',
   },
   {
     id: 'correspondence',
     dimension: 'Intimate Communication',
     oldTrap: 'Ephemeral Dopamine Snaps',
-    oldTrapDetail: 'Vanishing 10-second snaps and instant read-receipt anxiety demanding immediate shallow replies.',
+    oldTrapDetail:
+      'Vanishing 10-second snaps and instant read-receipt anxiety demanding immediate shallow replies.',
     pauseSolution: 'Golden-Hour Slow Letters',
-    pauseDetail: 'Unhurried correspondence sealed with wax and dispatched only at Sunrise or Sunset.',
+    pauseDetail:
+      'Unhurried correspondence sealed with wax and dispatched only at Sunrise or Sunset.',
     humanImpact: 'Revives deep epistolary thought and patient human relationships.',
   },
 ];
 
 export function MatrixCompare() {
   const [selectedId, setSelectedId] = useState<string>('stream');
-  const activeItem: ParadigmItem = PARADIGMS.find((p) => p.id === selectedId) ?? (PARADIGMS[0] as ParadigmItem);
+  const activeItem: ParadigmItem =
+    PARADIGMS.find((p) => p.id === selectedId) ?? (PARADIGMS[0] as ParadigmItem);
 
   return (
     <div className="matrix-compare-container" aria-label="The Paradigm Shift Matrix">
@@ -72,7 +83,8 @@ export function MatrixCompare() {
         </div>
         <h3>The Paradigm Shift: From Extractive Feeds to Human Flourishing</h3>
         <p>
-          Compare how mainstream platforms exploit psychological vulnerabilities versus how REIMAGINE SOCIAL systematically redesigns social architecture.
+          Compare how mainstream platforms exploit psychological vulnerabilities versus how
+          REIMAGINE SOCIAL systematically redesigns social architecture.
         </p>
       </header>
 

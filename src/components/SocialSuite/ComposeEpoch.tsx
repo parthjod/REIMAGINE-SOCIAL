@@ -120,18 +120,10 @@ export function ComposeEpoch({ promptTitle, onPost }: ComposeEpochProps) {
           🌱 Zero algorithms will rank this. It will be received with human care.
         </span>
         <div className="compose-actions">
-          <button
-            type="button"
-            className="compose-cancel-btn"
-            onClick={() => setIsOpen(false)}
-          >
+          <button type="button" className="compose-cancel-btn" onClick={() => setIsOpen(false)}>
             Cancel
           </button>
-          <button
-            type="submit"
-            className="compose-submit-btn"
-            disabled={!text.trim()}
-          >
+          <button type="submit" className="compose-submit-btn" disabled={!text.trim()}>
             {t('social.epoch.shareBtn')}
           </button>
         </div>

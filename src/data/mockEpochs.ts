@@ -7,9 +7,11 @@ export const TODAY_EPOCH: DailyEpoch = {
   epochNumber: 142,
   themeTitle: 'The Dignity of Quiet Failure',
   hindiThemeTitle: 'मौन असफलता की गरिमा',
-  prompt: 'What is something you learned today by failing quietly, away from the performance of success?',
+  prompt:
+    'What is something you learned today by failing quietly, away from the performance of success?',
   hindiPrompt: 'आज आपने किसी दिखावे के बिना, चुपचाप असफल होकर क्या नया सीखा?',
-  curatorNote: 'Today’s epoch rejects the hustle brag. We gather around the things that fell apart softly and gave us back our breath.',
+  curatorNote:
+    'Today’s epoch rejects the hustle brag. We gather around the things that fell apart softly and gave us back our breath.',
   posts: [
     {
       id: 'post-1',
@@ -17,7 +19,8 @@ export const TODAY_EPOCH: DailyEpoch = {
         id: 'user-elena',
         name: 'Elena Rostova',
         handle: '@elena.arch',
-        avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
+        avatar:
+          'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
         role: 'Spatial Designer & Potter',
         city: 'Kyoto / Berlin',
         constellation: 'Atmospheres & Light',
@@ -41,7 +44,8 @@ export const TODAY_EPOCH: DailyEpoch = {
         id: 'user-arjun',
         name: 'Arjun Mehta',
         handle: '@arjun.slow',
-        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80',
+        avatar:
+          'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80',
         role: 'Sound Archivist & Essayist',
         city: 'Bengaluru',
         constellation: 'Acoustic Ecologies',
@@ -64,7 +68,8 @@ export const TODAY_EPOCH: DailyEpoch = {
         id: 'user-saoirse',
         name: 'Saoirse Chen',
         handle: '@saoirse.film',
-        avatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&auto=format&fit=crop&q=80',
+        avatar:
+          'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&auto=format&fit=crop&q=80',
         role: 'Analog Cinematographer',
         city: 'Taipei / Vancouver',
         constellation: 'Slow Visuals',
@@ -87,7 +92,8 @@ export const TODAY_EPOCH: DailyEpoch = {
         id: 'user-dev',
         name: 'Devansh Verma',
         handle: '@dev.verma',
-        avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80',
+        avatar:
+          'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80',
         role: 'Philosopher & Mountain Guide',
         city: 'Manali',
         constellation: 'Wilderness & Solitude',
@@ -111,7 +117,8 @@ export const TODAY_EPOCH: DailyEpoch = {
         id: 'user-mariana',
         name: 'Mariana Silva',
         handle: '@mariana.ink',
-        avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80',
+        avatar:
+          'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80',
         role: 'Poet & Translator',
         city: 'Lisbon',
         constellation: 'Poetics of Everyday',
@@ -134,7 +141,8 @@ export const TODAY_EPOCH: DailyEpoch = {
         id: 'user-kian',
         name: 'Kian Thorne',
         handle: '@kian.bread',
-        avatar: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=150&auto=format&fit=crop&q=80',
+        avatar:
+          'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=150&auto=format&fit=crop&q=80',
         role: 'Wild Sourdough Baker',
         city: 'Edinburgh',
         constellation: 'Slow Crafts',

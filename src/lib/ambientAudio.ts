@@ -10,7 +10,9 @@ class SoundscapeEngine {
 
   private initContext() {
     if (!this.ctx) {
-      const AudioCtx = window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
+      const AudioCtx =
+        window.AudioContext ||
+        (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
       this.ctx = new AudioCtx();
       this.masterGain = this.ctx.createGain();
       this.masterGain.gain.setValueAtTime(0.3, this.ctx.currentTime);
@@ -23,7 +25,11 @@ class SoundscapeEngine {
 
   public setVolume(val: number) {
     if (this.masterGain && this.ctx) {
-      this.masterGain.gain.setTargetAtTime(Math.max(0, Math.min(val, 1)), this.ctx.currentTime, 0.05);
+      this.masterGain.gain.setTargetAtTime(
+        Math.max(0, Math.min(val, 1)),
+        this.ctx.currentTime,
+        0.05,
+      );
     }
   }
 
@@ -82,12 +88,14 @@ class SoundscapeEngine {
     const bufferSize = this.ctx.sampleRate * 2;
     const noiseBuffer = this.ctx.createBuffer(1, bufferSize, this.ctx.sampleRate);
     const output = noiseBuffer.getChannelData(0);
-    let b0 = 0, b1 = 0, b2 = 0;
+    let b0 = 0,
+      b1 = 0,
+      b2 = 0;
     for (let i = 0; i < bufferSize; i++) {
       const white = Math.random() * 2 - 1;
       b0 = 0.99886 * b0 + white * 0.0555179;
       b1 = 0.99332 * b1 + white * 0.0750759;
-      b2 = 0.96900 * b2 + white * 0.1538520;
+      b2 = 0.969 * b2 + white * 0.153852;
       output[i] = (b0 + b1 + b2 + white * 0.5362) * 0.11;
     }
 
@@ -134,7 +142,10 @@ class SoundscapeEngine {
         crackle.type = 'square';
         crackle.frequency.setValueAtTime(1200 + Math.random() * 2400, this.ctx.currentTime);
         crackleGain.gain.setValueAtTime(0.08 + Math.random() * 0.1, this.ctx.currentTime);
-        crackleGain.gain.exponentialRampToValueAtTime(0.0001, this.ctx.currentTime + 0.03 + Math.random() * 0.04);
+        crackleGain.gain.exponentialRampToValueAtTime(
+          0.0001,
+          this.ctx.currentTime + 0.03 + Math.random() * 0.04,
+        );
         crackle.connect(crackleGain);
         crackleGain.connect(this.masterGain);
         crackle.start();

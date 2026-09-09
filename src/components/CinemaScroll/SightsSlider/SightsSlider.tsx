@@ -21,11 +21,7 @@ export function SightsSlider({ trackRef, onSelect }: SightsSliderProps) {
   ).flat();
 
   return (
-    <section
-      className="sights-slider"
-      id="features"
-      aria-label="REIMAGINE SOCIAL features slider"
-    >
+    <section className="sights-slider" id="features" aria-label="REIMAGINE SOCIAL features slider">
       <div className="sights-track" ref={trackRef}>
         {allCards.map((card) => (
           <SightCard

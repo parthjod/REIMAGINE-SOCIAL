@@ -5,14 +5,19 @@ import { useTranslation } from 'react-i18next';
 
 interface SiteHeaderProps {
   isToolPage?: boolean;
-  onNavigateTab?: (tab: 'epoch' | 'campfire' | 'constellation' | 'letters' | 'radar' | 'manifesto') => void;
+  onNavigateTab?: (
+    tab: 'epoch' | 'campfire' | 'constellation' | 'letters' | 'radar' | 'manifesto',
+  ) => void;
 }
 
 export function SiteHeader({ isToolPage = false, onNavigateTab }: SiteHeaderProps) {
   const { t } = useTranslation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  function handleNavToSocial(e: React.MouseEvent, tab?: 'epoch' | 'campfire' | 'constellation' | 'letters' | 'radar' | 'manifesto') {
+  function handleNavToSocial(
+    e: React.MouseEvent,
+    tab?: 'epoch' | 'campfire' | 'constellation' | 'letters' | 'radar' | 'manifesto',
+  ) {
     e.preventDefault();
     setMobileMenuOpen(false);
     if (tab && onNavigateTab) {
@@ -36,7 +41,12 @@ export function SiteHeader({ isToolPage = false, onNavigateTab }: SiteHeaderProp
 
   return (
     <header className="site-header" aria-label="Primary navigation">
-      <a className="site-logo" href="/" onClick={handleLogoClick} aria-label="REIMAGINE SOCIAL Home">
+      <a
+        className="site-logo"
+        href="/"
+        onClick={handleLogoClick}
+        aria-label="REIMAGINE SOCIAL Home"
+      >
         REIMAGINE SOCIAL
       </a>
 
@@ -63,6 +73,15 @@ export function SiteHeader({ isToolPage = false, onNavigateTab }: SiteHeaderProp
       </nav>
 
       <div className="header-right-actions">
+        <button
+          type="button"
+          className="header-cta-btn"
+          onClick={(e) => handleNavToSocial(e, 'epoch')}
+          aria-label="Enter REIMAGINE SOCIAL Studio"
+        >
+          ✦ Open Studio
+        </button>
+
         <LanguageSwitcher />
 
         {/* Mobile Hamburger Toggle */}

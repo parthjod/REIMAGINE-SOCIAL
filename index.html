@@ -10,6 +10,13 @@
     />
     <meta name="theme-color" content="#050c14" />
     <meta name="color-scheme" content="dark" />
+    <meta name="application-name" content="REIMAGINE SOCIAL" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="REIMAGINE" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <link rel="canonical" href="https://reimagine-social-experience.vercel.app/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -34,9 +41,20 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.webmanifest" />
 
+    <!-- CDN Preconnect & Font Preload for Zero-CLS LCP -->
+    <link rel="preconnect" href="https://dcym8fthxf5uu.cloudfront.net" crossorigin />
+    <link rel="dns-prefetch" href="https://dcym8fthxf5uu.cloudfront.net" />
+    <link
+      rel="preload"
+      href="https://dcym8fthxf5uu.cloudfront.net/fonts/247a073c-29f5-4a89-aa3a-741020f346fc/OggText-Medium.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+
     <!-- Preload Primary Hero Layers for Fast FCP -->
-    <link rel="preload" as="image" href="/images/sky.webp" type="image/webp" />
-    <link rel="preload" as="image" href="/images/archFg.webp" type="image/webp" />
+    <link rel="preload" as="image" href="/images/sky.webp" type="image/webp" fetchpriority="high" />
+    <link rel="preload" as="image" href="/images/archFg.webp" type="image/webp" fetchpriority="high" />
   </head>
   <body>
     <div id="root"></div>

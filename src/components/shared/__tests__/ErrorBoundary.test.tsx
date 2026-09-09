@@ -16,7 +16,7 @@ describe('ErrorBoundary', () => {
     render(
       <ErrorBoundary>
         <HealthyChild />
-      </ErrorBoundary>
+      </ErrorBoundary>,
     );
     expect(screen.getByText('Healthy Space')).toBeInTheDocument();
   });
@@ -28,7 +28,7 @@ describe('ErrorBoundary', () => {
     render(
       <ErrorBoundary>
         <ProblemChild />
-      </ErrorBoundary>
+      </ErrorBoundary>,
     );
 
     expect(screen.getByRole('alert')).toBeInTheDocument();

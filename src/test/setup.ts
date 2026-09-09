@@ -1,5 +1,5 @@
-// src/test/setup.ts
 import '@testing-library/jest-dom';
+import { vi } from 'vitest';
 import '../i18n';
 
 // Mock window.matchMedia
@@ -18,7 +18,7 @@ Object.defineProperty(window, 'matchMedia', {
 });
 
 // Mock window.scrollTo
-window.scrollTo = () => {};
+window.scrollTo = vi.fn() as unknown as typeof window.scrollTo;
 
 // Mock Web Audio API for jsdom environment
 class MockAudioContext {

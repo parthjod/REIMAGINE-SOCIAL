@@ -21,11 +21,7 @@ describe('useSocialState Hook', () => {
     const { result } = renderHook(() => useSocialState());
 
     act(() => {
-      result.current.addPost(
-        'A quiet moment by the window',
-        'Deep Reflection',
-        'Rain at dusk'
-      );
+      result.current.addPost('A quiet moment by the window', 'Deep Reflection', 'Rain at dusk');
     });
 
     expect(result.current.epoch.posts[0]!.text).toBe('A quiet moment by the window');
@@ -52,7 +48,7 @@ describe('useSocialState Hook', () => {
         'Elena Woods',
         'Quiet evening',
         'Reflecting on the stillness',
-        'What brings you peace?'
+        'What brings you peace?',
       );
     });
 

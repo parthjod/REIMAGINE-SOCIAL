@@ -29,11 +29,7 @@ export function StoryPanel({
   const { t } = useTranslation();
 
   return (
-    <section
-      id={id}
-      className={`story-panel ${className}`}
-      aria-label={ariaLabel}
-    >
+    <section id={id} className={`story-panel ${className}`} aria-label={ariaLabel}>
       <h2>{t(headingKey)}</h2>
       <p>{t(bodyKey)}</p>
 

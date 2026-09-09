@@ -63,7 +63,11 @@ export function sanitizeText(input: string, maxLength = 1000): string {
 /**
  * Validates and safely parses JSON from localStorage with fallback and prototype pollution protection.
  */
-export function safeJsonParse<T>(raw: string | null, fallback: T, validator?: (parsed: unknown) => boolean): T {
+export function safeJsonParse<T>(
+  raw: string | null,
+  fallback: T,
+  validator?: (parsed: unknown) => boolean,
+): T {
   if (!raw) return fallback;
   try {
     const parsed = JSON.parse(raw);

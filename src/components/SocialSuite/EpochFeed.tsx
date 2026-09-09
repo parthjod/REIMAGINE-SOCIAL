@@ -13,20 +13,14 @@ interface EpochFeedProps {
   onSendLetter?: (recipientName: string) => void;
 }
 
-export function EpochFeed({
-  epoch,
-  onToggleResonance,
-  onAddPost,
-  onSendLetter,
-}: EpochFeedProps) {
+export function EpochFeed({ epoch, onToggleResonance, onAddPost, onSendLetter }: EpochFeedProps) {
   const { i18n } = useTranslation();
   const isHindi = i18n.language === 'hi';
   const [showMindfulModal, setShowMindfulModal] = useState(false);
   const [activeFilter, setActiveFilter] = useState<string>('all');
 
-  const filteredPosts = activeFilter === 'all'
-    ? epoch.posts
-    : epoch.posts.filter((p) => p.intention === activeFilter);
+  const filteredPosts =
+    activeFilter === 'all' ? epoch.posts : epoch.posts.filter((p) => p.intention === activeFilter);
 
   const themeTitle = isHindi ? epoch.hindiThemeTitle : epoch.themeTitle;
   const promptText = isHindi ? epoch.hindiPrompt : epoch.prompt;
@@ -57,10 +51,7 @@ export function EpochFeed({
       </header>
 
       {/* Compose Component */}
-      <ComposeEpoch
-        promptTitle={promptText}
-        onPost={onAddPost}
-      />
+      <ComposeEpoch promptTitle={promptText} onPost={onAddPost} />
 
       {/* Filter Tabs */}
       <div className="epoch-filter-bar">
@@ -116,7 +107,8 @@ export function EpochFeed({
           <span className="horizon-badge">✧ CLEAR HORIZON REACHED ✧</span>
           <h3>You are completely caught up.</h3>
           <p>
-            No algorithmic recommendations. No infinite scroll casino. You have honored today’s human circle.
+            No algorithmic recommendations. No infinite scroll casino. You have honored today’s
+            human circle.
           </p>
           <button
             type="button"
@@ -130,9 +122,7 @@ export function EpochFeed({
       </div>
 
       {/* Mindful Modal */}
-      {showMindfulModal && (
-        <CaughtUpModal onClose={() => setShowMindfulModal(false)} />
-      )}
+      {showMindfulModal && <CaughtUpModal onClose={() => setShowMindfulModal(false)} />}
     </div>
   );
 }

@@ -1,11 +1,5 @@
 import type { ComponentType } from 'react';
-import {
-  IconEpoch,
-  IconResonance,
-  IconCampfire,
-  IconConstellation,
-  IconSlowLetter,
-} from './icons';
+import { IconEpoch, IconResonance, IconCampfire, IconConstellation, IconSlowLetter } from './icons';
 
 export interface SightCardData {
   ariaLabel: string;

@@ -13,8 +13,8 @@ const INTENTION_COLORS: Record<string, string> = {
   'Creative Spark': '#fbbf24',
   'Quiet Observation': '#34d399',
   'Unfiltered Life': '#f43f5e',
-  'Philosophical': '#a78bfa',
-  'Poetic': '#ec4899',
+  Philosophical: '#a78bfa',
+  Poetic: '#ec4899',
 };
 
 export function EpochCard({ post, onToggleResonance, onSendLetter }: EpochCardProps) {
@@ -70,11 +70,7 @@ export function EpochCard({ post, onToggleResonance, onSendLetter }: EpochCardPr
       {/* Body Text */}
       <div className="epoch-card-body">
         <p>{post.text}</p>
-        {post.quote && (
-          <blockquote className="epoch-quote">
-            "{post.quote}"
-          </blockquote>
-        )}
+        {post.quote && <blockquote className="epoch-quote">"{post.quote}"</blockquote>}
       </div>
 
       {/* Footer / Resonances */}

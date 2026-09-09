@@ -12,7 +12,9 @@
   -webkit-backdrop-filter: blur(28px);
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 22px;
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(56, 189, 248, 0.1);
+  box-shadow:
+    0 16px 48px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(56, 189, 248, 0.1);
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -107,7 +109,6 @@
 }
 
 @keyframes audioPulse {
-
   0%,
   100% {
     opacity: 0.4;
@@ -791,7 +792,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 4s ease-in-out, border-color 1s ease;
+  transition:
+    transform 4s ease-in-out,
+    border-color 1s ease;
 }
 
 .breath-circle.inhale {
@@ -1680,7 +1683,10 @@
 .parchment-date {
   font-size: 11px;
   color: #6b7280;
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
 }
 
 .parchment-header {

@@ -6,7 +6,8 @@ export const MOCK_CONSTELLATIONS: ConstellationNode[] = [
     id: 'node-elena',
     name: 'Elena Rostova',
     handle: '@elena.arch',
-    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
+    avatar:
+      'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
     role: 'Spatial Designer & Potter',
     bio: 'Designing quiet tea houses and working with wild clay. Seeking architectural silence.',
     city: 'Kyoto / Berlin',
@@ -23,7 +24,8 @@ export const MOCK_CONSTELLATIONS: ConstellationNode[] = [
     id: 'node-arjun',
     name: 'Arjun Mehta',
     handle: '@arjun.slow',
-    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80',
+    avatar:
+      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80',
     role: 'Sound Archivist & Essayist',
     bio: 'Archiving endangered soundscapes and field recordings of monsoon rain across South Asia.',
     city: 'Bengaluru',
@@ -40,7 +42,8 @@ export const MOCK_CONSTELLATIONS: ConstellationNode[] = [
     id: 'node-saoirse',
     name: 'Saoirse Chen',
     handle: '@saoirse.film',
-    avatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&auto=format&fit=crop&q=80',
+    avatar:
+      'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&auto=format&fit=crop&q=80',
     role: 'Analog Cinematographer',
     bio: 'Working with 16mm hand-developed emulsion. Refusing digital high-frequency noise.',
     city: 'Taipei / Vancouver',
@@ -57,7 +60,8 @@ export const MOCK_CONSTELLATIONS: ConstellationNode[] = [
     id: 'node-dev',
     name: 'Devansh Verma',
     handle: '@dev.verma',
-    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80',
+    avatar:
+      'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80',
     role: 'Philosopher & Mountain Guide',
     bio: 'Guiding slow treks through Kinnaur and Zanskar. Thinking about finite time and endurance.',
     city: 'Manali',
@@ -74,7 +78,8 @@ export const MOCK_CONSTELLATIONS: ConstellationNode[] = [
     id: 'node-mariana',
     name: 'Mariana Silva',
     handle: '@mariana.ink',
-    avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80',
+    avatar:
+      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80',
     role: 'Poet & Translator',
     bio: 'Translating twilight poetry and exploring human solitude in coastal Atlantic cities.',
     city: 'Lisbon',
@@ -91,7 +96,8 @@ export const MOCK_CONSTELLATIONS: ConstellationNode[] = [
     id: 'node-kian',
     name: 'Kian Thorne',
     handle: '@kian.bread',
-    avatar: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=150&auto=format&fit=crop&q=80',
+    avatar:
+      'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=150&auto=format&fit=crop&q=80',
     role: 'Wild Sourdough Baker',
     bio: 'Fermenting heritage grains with Scottish heather honey. Teaching slow baking workshops.',
     city: 'Edinburgh',
@@ -108,7 +114,8 @@ export const MOCK_CONSTELLATIONS: ConstellationNode[] = [
     id: 'node-tara',
     name: 'Tara Al-Mansoor',
     handle: '@tara.optics',
-    avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&auto=format&fit=crop&q=80',
+    avatar:
+      'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&auto=format&fit=crop&q=80',
     role: 'Stargazer & Astro-Physicist',
     bio: 'Observing deep space infrared signals in the Atacama desert. Contemplating cosmic scales.',
     city: 'San Pedro de Atacama',
@@ -117,7 +124,8 @@ export const MOCK_CONSTELLATIONS: ConstellationNode[] = [
     y: 74,
     connections: ['node-saoirse', 'node-dev'],
     frequencies: ['Nebulae', 'Quiet Telescopes', 'Infinity', 'Night Sky'],
-    recentThought: 'The photons hitting your retina right now left that star before humanity spoke.',
+    recentThought:
+      'The photons hitting your retina right now left that star before humanity spoke.',
     auraColor: '#38bdf8',
     resonanceTotal: 312,
   },

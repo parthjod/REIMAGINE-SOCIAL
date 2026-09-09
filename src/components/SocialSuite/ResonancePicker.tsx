@@ -8,11 +8,7 @@ interface ResonancePickerProps {
   onToggle: (type: ResonanceType) => void;
 }
 
-export function ResonancePicker({
-  resonances,
-  userResonances,
-  onToggle,
-}: ResonancePickerProps) {
+export function ResonancePicker({ resonances, userResonances, onToggle }: ResonancePickerProps) {
   const { i18n } = useTranslation();
   const isHindi = i18n.language === 'hi';
 
@@ -40,12 +36,8 @@ export function ResonancePicker({
             <span className="resonance-icon" aria-hidden="true">
               {info.icon}
             </span>
-            <span className="resonance-label">
-              {isHindi ? info.hindiLabel : info.label}
-            </span>
-            <span className="resonance-count">
-              {count}
-            </span>
+            <span className="resonance-label">{isHindi ? info.hindiLabel : info.label}</span>
+            <span className="resonance-count">{count}</span>
           </button>
         );
       })}

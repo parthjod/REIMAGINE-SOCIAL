@@ -18,12 +18,14 @@ describe('CampfireRoom Component', () => {
         soundVolume={0.4}
         onToggleSound={handleToggleSound}
         onUpdateVolume={handleUpdateVolume}
-      />
+      />,
     );
 
     expect(screen.getByText('The Synchronous Hearth')).toBeInTheDocument();
     expect(screen.getByText('94')).toBeInTheDocument();
-    expect(screen.getAllByText(new RegExp(INITIAL_CAMPFIRE_THOUGHTS[0]!.author, 'i')).length).toBeGreaterThan(0);
+    expect(
+      screen.getAllByText(new RegExp(INITIAL_CAMPFIRE_THOUGHTS[0]!.author, 'i')).length,
+    ).toBeGreaterThan(0);
   });
 
   it('allows user to whisper a new thought spark to the hearth', () => {
@@ -39,7 +41,7 @@ describe('CampfireRoom Component', () => {
         soundVolume={0.4}
         onToggleSound={handleToggleSound}
         onUpdateVolume={handleUpdateVolume}
-      />
+      />,
     );
 
     const input = screen.getByPlaceholderText(/Drop an ephemeral whisper into the hearth/i);
@@ -64,7 +66,7 @@ describe('CampfireRoom Component', () => {
         soundVolume={0.4}
         onToggleSound={handleToggleSound}
         onUpdateVolume={handleUpdateVolume}
-      />
+      />,
     );
 
     const cedarBtn = screen.getByText('Cedar Fireplace');

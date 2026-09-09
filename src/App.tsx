@@ -6,13 +6,13 @@ import { ErrorBoundary } from './components/shared/ErrorBoundary';
 import { useTranslation } from 'react-i18next';
 
 const CinemaScroll = lazy(() =>
-  import('./components/CinemaScroll/CinemaScroll').then((m) => ({ default: m.CinemaScroll }))
+  import('./components/CinemaScroll/CinemaScroll').then((m) => ({ default: m.CinemaScroll })),
 );
 const SocialShell = lazy(() =>
-  import('./components/SocialSuite/SocialShell').then((m) => ({ default: m.SocialShell }))
+  import('./components/SocialSuite/SocialShell').then((m) => ({ default: m.SocialShell })),
 );
 const NotFound = lazy(() =>
-  import('./components/shared/NotFound').then((m) => ({ default: m.NotFound }))
+  import('./components/shared/NotFound').then((m) => ({ default: m.NotFound })),
 );
 
 function PageLoading() {
@@ -42,7 +42,14 @@ function PageLoading() {
             margin: '0 auto 16px',
           }}
         />
-        <p style={{ fontSize: '13px', letterSpacing: '0.08em', textTransform: 'uppercase', opacity: 0.8 }}>
+        <p
+          style={{
+            fontSize: '13px',
+            letterSpacing: '0.08em',
+            textTransform: 'uppercase',
+            opacity: 0.8,
+          }}
+        >
           Entering Calm Space...
         </p>
       </div>
