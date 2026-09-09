@@ -1,4 +1,5 @@
 // src/components/Nav/SiteHeader.tsx
+import { useState } from 'react';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { useTranslation } from 'react-i18next';
 
@@ -9,9 +10,11 @@ interface SiteHeaderProps {
 
 export function SiteHeader({ isToolPage = false, onNavigateTab }: SiteHeaderProps) {
   const { t } = useTranslation();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   function handleNavToSocial(e: React.MouseEvent, tab?: 'epoch' | 'campfire' | 'constellation' | 'letters' | 'radar' | 'manifesto') {
     e.preventDefault();
+    setMobileMenuOpen(false);
     if (tab && onNavigateTab) {
       onNavigateTab(tab);
     }
@@ -26,17 +29,19 @@ export function SiteHeader({ isToolPage = false, onNavigateTab }: SiteHeaderProp
   function handleLogoClick(e: React.MouseEvent) {
     if (!isToolPage) {
       e.preventDefault();
+      setMobileMenuOpen(false);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   }
 
   return (
     <header className="site-header" aria-label="Primary navigation">
-      <a className="site-logo" href="/" onClick={handleLogoClick}>
+      <a className="site-logo" href="/" onClick={handleLogoClick} aria-label="REIMAGINE SOCIAL Home">
         REIMAGINE SOCIAL
       </a>
 
-      <nav className="site-nav" aria-label="Main menu">
+      {/* Desktop Navigation */}
+      <nav className={`site-nav ${mobileMenuOpen ? 'open' : ''}`} aria-label="Main menu">
         <a href="#epoch" onClick={(e) => handleNavToSocial(e, 'epoch')}>
           {t('social.nav.epoch')}
         </a>
@@ -57,7 +62,22 @@ export function SiteHeader({ isToolPage = false, onNavigateTab }: SiteHeaderProp
         </a>
       </nav>
 
-      <LanguageSwitcher />
+      <div className="header-right-actions">
+        <LanguageSwitcher />
+
+        {/* Mobile Hamburger Toggle */}
+        <button
+          type="button"
+          className="mobile-menu-toggle"
+          aria-expanded={mobileMenuOpen}
+          aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        >
+          <span className="hamburger-bar" />
+          <span className="hamburger-bar" />
+          <span className="hamburger-bar" />
+        </button>
+      </div>
     </header>
   );
 }

@@ -36,3 +36,7 @@ Thumbs.db
 
 # PWA service worker outputs
 dev-dist
+
+# TypeScript build info & coverage
+*.tsbuildinfo
+coverage/

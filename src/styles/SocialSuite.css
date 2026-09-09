@@ -1758,9 +1758,187 @@
   background: #000000;
 }
 
-/* ── Responsive ────────────────────────────────────────────── */
+/* ── Responsive Ergonomics ─────────────────────────────────── */
+@media (max-width: 1024px) {
+  .social-suite-shell {
+    max-width: 100%;
+    height: min(76vh, 580px);
+  }
+
+  .epoch-feed-container,
+  .campfire-room-container,
+  .slow-letters-container,
+  .escape-radar-container,
+  .matrix-compare-container {
+    padding: 16px 20px;
+  }
+}
+
 @media (max-width: 768px) {
+  .social-suite-shell {
+    height: min(84vh, 640px);
+    border-radius: 18px;
+    margin: 0;
+  }
+
+  .social-tabs-nav {
+    padding: 6px 10px;
+    gap: 4px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .tab-item {
+    padding: 6px 10px;
+    font-size: 11.5px;
+    gap: 4px;
+  }
+
+  .epoch-feed-container,
+  .campfire-room-container,
+  .slow-letters-container,
+  .escape-radar-container,
+  .matrix-compare-container {
+    padding: 14px 14px 20px;
+  }
+
+  .epoch-header-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .campfire-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .soundscape-control-bar {
+    width: 100%;
+  }
+
+  .soundscape-modes {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .letters-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .compose-letter-cta {
+    align-self: flex-start;
+  }
+
+  .letters-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .radar-metric-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
   .matrix-stage {
     grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  /* Modals responsiveness */
+  .parchment-letter-modal,
+  .caught-up-modal,
+  .node-modal-card {
+    width: calc(100vw - 32px);
+    max-width: 520px;
+    max-height: 84vh;
+    padding: 20px 16px;
+  }
+
+  .grounding-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .compose-collapsed-bar {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .compose-actions {
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-suite-shell {
+    height: min(88vh, 660px);
+    border-radius: 14px;
+  }
+
+  .social-tabs-nav {
+    padding: 6px 8px;
+  }
+
+  .tab-label {
+    display: inline-block;
+    font-size: 11px;
+  }
+
+  .tab-icon {
+    font-size: 12px;
+  }
+
+  .epoch-prompt-hero h2 {
+    font-size: 16px;
+    line-height: 1.35;
+  }
+
+  .radar-metric-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .radar-card {
+    padding: 12px;
+  }
+
+  .radar-num {
+    font-size: 22px;
+  }
+
+  .composer-row-duo {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .hearth-visualizer-canvas {
+    height: 160px;
+  }
+
+  .campfire-spark-card {
+    padding: 10px 12px;
+  }
+
+  .post-resonances {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .resonance-pill {
+    padding: 4px 8px;
+    font-size: 11px;
+    min-height: 36px;
+  }
+
+  .parchment-letter-modal,
+  .caught-up-modal,
+  .node-modal-card {
+    width: calc(100vw - 20px);
+    max-height: 88vh;
+    padding: 16px 12px;
   }
 }

@@ -4,7 +4,10 @@ import { initReactI18next } from 'react-i18next';
 import en from './locales/en.json';
 import hi from './locales/hi.json';
 
-const savedLang = localStorage.getItem('reimagine-social-lang') ?? localStorage.getItem('paypause-lang') ?? 'en';
+const savedLang =
+  typeof window !== 'undefined' && typeof localStorage !== 'undefined'
+    ? localStorage.getItem('reimagine-social-lang') ?? localStorage.getItem('paypause-lang') ?? 'en'
+    : 'en';
 
 i18n
   .use(initReactI18next)

@@ -4,6 +4,8 @@ import type { CampfireThought } from '../../types/social';
 import { AMBIENT_SOUNDS } from '../../data/mockCampfire';
 import { useTranslation } from 'react-i18next';
 
+import { sanitizeText } from '../../lib/sanitize';
+
 interface CampfireRoomProps {
   thoughts: CampfireThought[];
   onAddThought: (text: string, vibe: string) => void;
@@ -29,8 +31,9 @@ export function CampfireRoom({
 
   function handleSend(e: React.FormEvent) {
     e.preventDefault();
-    if (!whisperText.trim()) return;
-    onAddThought(whisperText.trim(), selectedVibe);
+    const cleanWhisper = sanitizeText(whisperText, 140);
+    if (!cleanWhisper) return;
+    onAddThought(cleanWhisper, selectedVibe);
     setWhisperText('');
   }
 

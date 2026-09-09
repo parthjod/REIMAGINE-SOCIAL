@@ -11,13 +11,13 @@ import { useTranslation } from 'react-i18next';
 import '../../styles/CinemaScroll.css';
 
 const ASSETS = {
-  sky:         '/images/sky.png',
-  backGlow:    '/images/backGlow.png',
-  cityMidBack: '/images/cityMidBack.png',
-  splitLeft:   '/images/splitLeft.png',
-  splitRight:  '/images/splitRight.png',
-  archFg:      '/images/archFg.png',
-  frameTwo:    '/images/frameTwo.png',
+  sky:         '/images/sky.webp',
+  backGlow:    '/images/backGlow.webp',
+  cityMidBack: '/images/cityMidBack.webp',
+  splitLeft:   '/images/splitLeft.webp',
+  splitRight:  '/images/splitRight.webp',
+  archFg:      '/images/archFg.webp',
+  frameTwo:    '/images/frameTwo.webp',
 };
 
 export function CinemaScroll() {
@@ -50,29 +50,29 @@ export function CinemaScroll() {
         <div className="stage">
           <div className="world">
             {/* Sky — farthest background */}
-            <img className="scene-img sky-img" src={ASSETS.sky} alt="" />
+            <img className="scene-img sky-img" src={ASSETS.sky} alt="Atmospheric sky" decoding="async" fetchPriority="high" />
 
             {/* Navigation */}
             <SiteHeader isToolPage={false} onNavigateTab={handleNavigateTab} />
 
             {/* Back stack — mid layers */}
             <div className="back-stack">
-              <img className="scene-img back-img back-four" src={ASSETS.backGlow} alt="" />
-              <img className="scene-img back-img back-bazaar" src={ASSETS.cityMidBack} alt="" />
+              <img className="scene-img back-img back-four" src={ASSETS.backGlow} alt="" decoding="async" loading="lazy" />
+              <img className="scene-img back-img back-bazaar" src={ASSETS.cityMidBack} alt="" decoding="async" loading="lazy" />
             </div>
 
             {/* Hero title — sized and positioned to fit inside the arch opening */}
             <h1 className="hero-title">REIMAGINE SOCIAL</h1>
 
             {/* Splitframes */}
-            <img className="scene-img splitframe-img splitframe-left"  src={ASSETS.splitLeft}  alt="" />
-            <img className="scene-img splitframe-img splitframe-right" src={ASSETS.splitRight} alt="" />
+            <img className="scene-img splitframe-img splitframe-left"  src={ASSETS.splitLeft}  alt="" decoding="async" loading="lazy" />
+            <img className="scene-img splitframe-img splitframe-right" src={ASSETS.splitRight} alt="" decoding="async" loading="lazy" />
 
             {/* Arch foreground */}
-            <img className="scene-img bridge-img" src={ASSETS.archFg} alt="" />
+            <img className="scene-img bridge-img" src={ASSETS.archFg} alt="" decoding="async" fetchPriority="high" />
 
             {/* Frame two close-up */}
-            <img className="scene-img frame-two-img" src={ASSETS.frameTwo} alt="" />
+            <img className="scene-img frame-two-img" src={ASSETS.frameTwo} alt="" decoding="async" loading="lazy" />
 
             {/* Navy shade overlay */}
             <div className="shade" />

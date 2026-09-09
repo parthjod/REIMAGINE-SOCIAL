@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import type { SlowLetter } from '../../types/social';
 import { useTranslation } from 'react-i18next';
+import { sanitizeText } from '../../lib/sanitize';
 
 interface SlowLettersViewProps {
   letters: SlowLetter[];
@@ -35,8 +36,12 @@ export function SlowLettersView({
 
   function handleSend(e: React.FormEvent) {
     e.preventDefault();
-    if (!recipient.trim() || !body.trim()) return;
-    onSendLetter(recipient.trim(), subject.trim() || 'A Quiet Thought', body.trim(), reflectionPrompt.trim());
+    const cleanRecipient = sanitizeText(recipient, 80);
+    const cleanSubject = sanitizeText(subject, 120);
+    const cleanBody = sanitizeText(body, 3000);
+    const cleanPrompt = sanitizeText(reflectionPrompt, 200);
+    if (!cleanRecipient || !cleanBody) return;
+    onSendLetter(cleanRecipient, cleanSubject || 'A Quiet Thought', cleanBody, cleanPrompt);
     setRecipient('');
     setSubject('');
     setBody('');

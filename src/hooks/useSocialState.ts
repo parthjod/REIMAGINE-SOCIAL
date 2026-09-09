@@ -15,6 +15,7 @@ import { INITIAL_CAMPFIRE_THOUGHTS } from '../data/mockCampfire';
 import { INITIAL_LETTERS } from '../data/mockLetters';
 import { MOCK_CONSTELLATIONS } from '../data/mockConstellations';
 import { soundscape } from '../lib/ambientAudio';
+import { safeJsonParse } from '../lib/sanitize';
 
 const STORAGE_KEYS = {
   EPOCH: 'pause_social_epoch_v1',
@@ -37,26 +38,24 @@ export type SocialTab = 'epoch' | 'campfire' | 'constellation' | 'letters' | 'ra
 export function useSocialState() {
   const [activeTab, setActiveTab] = useState<SocialTab>('epoch');
 
-  // Epoch State
+  // Epoch State with schema protection
   const [epoch, setEpoch] = useState<DailyEpoch>(() => {
-    try {
-      const saved = localStorage.getItem(STORAGE_KEYS.EPOCH);
-      return saved ? JSON.parse(saved) : TODAY_EPOCH;
-    } catch {
-      return TODAY_EPOCH;
-    }
+    return safeJsonParse<DailyEpoch>(
+      localStorage.getItem(STORAGE_KEYS.EPOCH),
+      TODAY_EPOCH,
+      (val) => Boolean(val && typeof val === 'object' && 'posts' in (val as DailyEpoch))
+    );
   });
 
   const [isEpochCaughtUp, setIsEpochCaughtUp] = useState(false);
 
   // Campfire State
   const [campfireThoughts, setCampfireThoughts] = useState<CampfireThought[]>(() => {
-    try {
-      const saved = localStorage.getItem(STORAGE_KEYS.CAMPFIRE);
-      return saved ? JSON.parse(saved) : INITIAL_CAMPFIRE_THOUGHTS;
-    } catch {
-      return INITIAL_CAMPFIRE_THOUGHTS;
-    }
+    return safeJsonParse<CampfireThought[]>(
+      localStorage.getItem(STORAGE_KEYS.CAMPFIRE),
+      INITIAL_CAMPFIRE_THOUGHTS,
+      (val) => Array.isArray(val)
+    );
   });
 
   const [activeSound, setActiveSound] = useState<'hearth' | 'rain' | 'twilight' | 'chimes' | null>(null);
@@ -68,22 +67,20 @@ export function useSocialState() {
 
   // Letters State
   const [letters, setLetters] = useState<SlowLetter[]>(() => {
-    try {
-      const saved = localStorage.getItem(STORAGE_KEYS.LETTERS);
-      return saved ? JSON.parse(saved) : INITIAL_LETTERS;
-    } catch {
-      return INITIAL_LETTERS;
-    }
+    return safeJsonParse<SlowLetter[]>(
+      localStorage.getItem(STORAGE_KEYS.LETTERS),
+      INITIAL_LETTERS,
+      (val) => Array.isArray(val)
+    );
   });
 
   // Escape Stats
   const [stats, setStats] = useState<EscapeMetrics>(() => {
-    try {
-      const saved = localStorage.getItem(STORAGE_KEYS.STATS);
-      return saved ? JSON.parse(saved) : DEFAULT_STATS;
-    } catch {
-      return DEFAULT_STATS;
-    }
+    return safeJsonParse<EscapeMetrics>(
+      localStorage.getItem(STORAGE_KEYS.STATS),
+      DEFAULT_STATS,
+      (val) => Boolean(val && typeof val === 'object')
+    );
   });
 
   // Save to localStorage

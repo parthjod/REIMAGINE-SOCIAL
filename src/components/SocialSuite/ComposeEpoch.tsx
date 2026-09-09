@@ -17,6 +17,8 @@ const TAGS: IntentionTag[] = [
   'Poetic',
 ];
 
+import { sanitizeText } from '../../lib/sanitize';
+
 export function ComposeEpoch({ promptTitle, onPost }: ComposeEpochProps) {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
@@ -26,8 +28,10 @@ export function ComposeEpoch({ promptTitle, onPost }: ComposeEpochProps) {
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (!text.trim()) return;
-    onPost(text.trim(), selectedTag, anchor.trim());
+    const cleanText = sanitizeText(text, 1200);
+    const cleanAnchor = sanitizeText(anchor, 150);
+    if (!cleanText) return;
+    onPost(cleanText, selectedTag, cleanAnchor);
     setText('');
     setAnchor('');
     setIsOpen(false);

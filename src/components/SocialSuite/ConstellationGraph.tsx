@@ -119,6 +119,12 @@ export function ConstellationGraph({ nodes, onSendLetter }: ConstellationGraphPr
               onMouseEnter={() => setHoveredNode(node)}
               onMouseLeave={() => setHoveredNode(null)}
               onClick={() => setSelectedNode(node)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  setSelectedNode(node);
+                }
+              }}
               role="button"
               tabIndex={0}
               aria-label={`Open profile for ${node.name}`}

@@ -2,13 +2,41 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>REIMAGINE SOCIAL — The Next Generation of Social Interaction</title>
-    <meta name="description" content="REIMAGINE SOCIAL is a human-first social platform designed to set you free from the infinite feed: finite daily epochs, qualitative resonance over likes, organic constellations, synchronous campfires, and slow letters." />
+    <meta
+      name="description"
+      content="REIMAGINE SOCIAL is a human-first social platform designed to set you free from the infinite feed: finite daily epochs, qualitative resonance over likes, organic constellations, synchronous campfires, and slow letters."
+    />
     <meta name="theme-color" content="#050c14" />
+    <meta name="color-scheme" content="dark" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="REIMAGINE SOCIAL — The Next Generation of Social Interaction" />
+    <meta
+      property="og:description"
+      content="A human-first social platform engineered to set you free: finite daily epochs, qualitative resonance over likes, organic constellations, synchronous campfires, and slow letters."
+    />
+    <meta property="og:image" content="/icon-512.png" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="REIMAGINE SOCIAL — Beyond the Feed" />
+    <meta
+      name="twitter:description"
+      content="Finite epochs, organic constellations, slow letters, and synchronous presence."
+    />
+    <meta name="twitter:image" content="/icon-512.png" />
+
+    <!-- Icons & Manifest -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.webmanifest" />
+
+    <!-- Preload Primary Hero Layers for Fast FCP -->
+    <link rel="preload" as="image" href="/images/sky.webp" type="image/webp" />
+    <link rel="preload" as="image" href="/images/archFg.webp" type="image/webp" />
   </head>
   <body>
     <div id="root"></div>

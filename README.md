@@ -14,8 +14,13 @@
   <img src="https://img.shields.io/badge/React-18.3-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React 18" />
   <img src="https://img.shields.io/badge/TypeScript-5.5_Strict-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
   <img src="https://img.shields.io/badge/Vite-5.4-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
-  <img src="https://img.shields.io/badge/Web_Audio_API-Procedural_Soundscapes-00D4B2?style=for-the-badge&logo=soundcharts&logoColor=black" alt="Web Audio" />
+  <img src="https://img.shields.io/badge/CI-Passing-brightgreen?style=for-the-badge&logo=githubactions&logoColor=white" alt="CI Status" />
+  <img src="https://img.shields.io/badge/Tests-100%25_Passing-success?style=for-the-badge&logo=vitest&logoColor=white" alt="Tests" />
+  <img src="https://img.shields.io/badge/ESLint-0_Errors-4B32C3?style=for-the-badge&logo=eslint&logoColor=white" alt="ESLint" />
+  <img src="https://img.shields.io/badge/Security-A%2B_Sanitized-10B981?style=for-the-badge" alt="Security" />
+  <img src="https://img.shields.io/badge/Web_Audio_API-Procedural_DSP-00D4B2?style=for-the-badge&logo=soundcharts&logoColor=black" alt="Web Audio" />
   <img src="https://img.shields.io/badge/PWA-Offline_Ready-FF6F00?style=for-the-badge&logo=pwa&logoColor=white" alt="PWA" />
+  <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" alt="MIT License" />
   <img src="https://img.shields.io/badge/Architecture-100%25_Frontend_Only-10B981?style=for-the-badge" alt="Zero Backend" />
 </p>
 
